@@ -44,6 +44,7 @@ public class SampleOnXActivity extends Activity {
             // IPアドレス確認ダイアログ
             mAlertDialog = showAlertDialog();
             mAlertDialog.show();
+            return;
         }
         WS_URI = "ws://" + pref.getString("IPADDRESS", "") + ":8001/";
 
