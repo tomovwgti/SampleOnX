@@ -16,7 +16,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tomovwgti.json.Light;
 import com.tomovwgti.json.Msg;
 
 import de.roderick.weberknecht.WebSocketEventHandler;
@@ -74,14 +73,9 @@ public class SampleOnXActivity extends Activity {
             public void onOpen() {
                 Log.d(TAG, "websocket connect open");
                 Msg msg = new Msg();
-                Light light = new Light();
-                msg.setCommand("");
-                msg.setSender("android");
-                msg.setCommand("light");
-                light.setRed(255);
-                light.setGreen(255);
-                light.setBlue(255);
-                msg.setLight(light);
+                msg.setCommand("AirCon");
+                msg.setSender("onX");
+                msg.setSetting(26);
                 String message = JSON.encode(msg);
                 WebSocketManager.send(message);
             }

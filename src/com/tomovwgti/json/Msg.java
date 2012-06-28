@@ -5,7 +5,16 @@ public class Msg {
     String sender;
     String command;
     String message;
-    Light light;
+    int temperature;
+    int setting;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public String getSender() {
         return sender;
@@ -23,19 +32,19 @@ public class Msg {
         this.command = command;
     }
 
-    public String getMessage() {
-        return message;
+    public int getTemperature() {
+        return temperature;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
     }
 
-    public Light getLight() {
-        return light;
+    public int getSetting() {
+        return setting;
     }
 
-    public void setLight(Light light) {
-        this.light = light;
+    public void setSetting(int setting) {
+        this.setting = setting;
     }
 }
